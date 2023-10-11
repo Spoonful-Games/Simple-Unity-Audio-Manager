@@ -164,7 +164,6 @@ namespace JSAM.JSAMEditor
             {
                 editorFader = new SoundEditorFader(asset);
             }
-            list = new AudioClipList(serializedObject, files);
         }
 
         void OnDisable()
@@ -228,9 +227,11 @@ namespace JSAM.JSAMEditor
 
             EditorGUILayout.Space();
 
-            RenderFileList();
+            EditorGUILayout.PropertyField(files);
+            
+            //RenderFileList();
 
-            EditorGUILayout.Space();
+            //EditorGUILayout.Space();
 
             blontent = new GUIContent("Never Repeat", "Sometimes, AudioManager will allow the same sound from the Audio " +
             "library to play twice in a row, enabling this option will ensure that this audio file never plays the same " +
