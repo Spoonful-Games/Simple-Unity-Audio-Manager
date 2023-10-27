@@ -205,7 +205,7 @@ namespace JSAM
         public float delay = 0;
 
         [Tooltip("If true, will ignore the \"Time Scaled Sounds\" parameter in AudioManager and will keep playing the sound even when the Time Scale is set to 0")]
-        public bool ignoreTimeScale = false;
+        public bool ignoreTimeScale = true;
 
         [Tooltip("The inclusive maximum number of playing instances this Audio File can take up at once. Helpful for things like gun shots where you can easily fire off 50 of the same Audio File in 1 frame. Leave at 0 if that is what you want.")]
         public uint maxPlayingInstances = 10;
