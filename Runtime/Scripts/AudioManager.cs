@@ -26,7 +26,7 @@ namespace JSAM
                 else if (instance.gameObject.scene == null) missing = true;
                 if (missing)
                 {
-                    instance = FindObjectOfType<AudioManager>();
+                    instance = FindAnyObjectByType<AudioManager>();
                     if (instance == null)
                     {
                         if (!isQuitting && Application.isPlaying)
@@ -202,7 +202,7 @@ namespace JSAM
                 }
                 else if (listener == null) // Try to find one ourselves
                 {
-                    listener = FindObjectOfType<AudioListener>();
+                    listener = FindAnyObjectByType<AudioListener>();
                     DebugLog("AudioManager located an AudioListener successfully!");
                 }
                 if (listener == null) // In the case that there still isn't an AudioListener
